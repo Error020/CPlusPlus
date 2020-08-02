@@ -10,7 +10,7 @@ Problem 1. Write a C++ program using two for loops to produce the following patt
   ********
 
 
-  Can one write the code with only one for loop?
+  Can one write the code with only one for loop? 
 
 
 
