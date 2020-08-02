@@ -1,0 +1,106 @@
+Problem 1. Write a C++ program using two for loops to produce the following pattern of asterisks
+
+  *
+  **
+  ***
+  ****
+  *****
+  ******
+  *******
+  ********
+
+
+  Can one write the code with only one for loop?
+
+
+
+Problem 2. Read in three integers of data type int from the keyboard. Then add the three numbers. Type convert the sum to data type double and divide by 3.0 (data type double) to find the arithmetic mean.
+
+
+
+Problem 3. Given an array of floating point numbers (data type double)
+
+  a[0] = 11.1, a[1] = 5.3, a[2] = 7.3, a[3] = -1.5, a[4] = -6.5
+
+  Write a C++ program containing a function
+
+  void maxmin(double* a,double& min,double& max,int size)
+
+  which evaluates the minimum value min and the maximum value max of the array a.size denotes the size of the array. In the present case size = 5.
+
+
+
+Problem 4. Let a , b , c be three integer numbers. Write a C++ program with a functions
+
+  void rotate1(int* a,int* b,int* c)
+
+  void rotate2(int& a,int& b,int& c)
+
+  such that a -> b , b -> c and c -> a. Thus we use two different approaches (pointers in rotate1 and references in rotate2).
+
+
+
+Problem 5. Write a C++ program with a function
+
+  int find_char(char*,char)
+
+  that finds out whether there is a given character in a string. The return value of the function find_char should be 1 if the given character is in the string otherwise 0. Can one use recursion? Rewrite the code using the string class, i.e.,
+
+  int find_char(string,char)
+
+
+
+Problem 6. Write a C++ program with a function
+
+  int digits(char*)
+
+  which checks whether a given string consists only of digits. If so, the return value should be 1 otherwise 0. Rewrite the code using the string class
+
+  int digits(string)
+
+
+
+Problem 7. Write a C++ program with a function
+
+  int equals(int*,int*)
+
+  which checks whether two integer arrays (of course of the same length) are the same. In this case the return value should be 1 otherwise 0. Rewrite the code using templates.
+
+
+
+Problem 8. Using the classes ofstream and ifstream write a C++ program that writes
+
+  double x = 3.14159;
+
+  to the file myfile.txt. Then read the file and display the number on the screen. Rewrite the code using binary file manipulation.
+
+
+
+Problem 9. Wite a C++ program that uses the class ofstream that writes the 0 of
+
+  unsigned int counter = 0;
+
+  to the file counter.txt. Then write another C++ program that reads the file counter.txt. Then it increments counter by 1 and writes the incremented number back to the file counter.txt. Use the classes ofstream and ifstream. Every time when we run the program the incremented number should be displayed on the screen.
+
+
+
+Problem 10. Give a data file (text file) named mydata.dat with the contents
+
+  2 6 -6 -13 78 34 -1
+  2.1 5.6 -8.13
+  'A' 'B' 'B' 'A'
+
+  Read this file into your C++ program called sums.cpp and calculates first the sum of the integers, then the sum of the floating point numbers (data type double) and finally ``concatenate'' the characters to the string "ABBA".
+
+
+
+Problem 11. Using the vector class of the Standard Template Library write a C++ program that uses the declaration
+
+  vector< vector< int > > v(3)
+
+  to build a two-dimensional array and (of course) the function resize.
+  Extend the program to
+
+  vector< vector< vector< int > > > v(2)
+
+  to build a three-dimensional array.
