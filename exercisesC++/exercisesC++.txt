@@ -1,3 +1,5 @@
+Over the next time I will also push the remaining exercises into the repo. And some of them I did a little bit different than described because I was too lazy.
+
 Problem 1. Write a C++ program using two for loops to produce the following pattern of asterisks
 
   *
