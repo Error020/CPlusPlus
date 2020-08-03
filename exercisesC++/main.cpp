@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
-#include <array>
+#include <fstream>
 #include "selectionsort.hpp"
 using namespace std;
 
@@ -75,7 +75,7 @@ void rotate4(int a, int b, int c )  {
   a = b;
   b = c;
   c = buffer;
-  cout << endl << "continue? R : " << endl;
+  cout << endl << "Press R to rotate or any other key to skip : " << endl;
   char ans1;
   cin >> ans1;
   if (ans1 == 'R' || ans1 == 'r')  {
@@ -100,9 +100,7 @@ void findchar5()  {
   string ac;
   s += c;
   int i;
-  cout << endl << st << endl;
   for (i = 0; i < st.length(); i++) {
-    cout << st[i];
     ac = st[i];
     if (ac == s)  {
       pos = i+1;
@@ -154,6 +152,29 @@ int arrEquals7(int* a, int* b) {
   else {
     return 0;
   }
+}
+
+//exercise 8
+
+void wrfile8() {
+  double x = 3.14159;
+  ifstream is;
+  ofstream os;
+
+  os.open ("myfile.txt", ofstream::out | ofstream::trunc);
+
+  os << x;
+
+  os.close ();
+
+  is.open ("myfile.txt", ifstream::in);
+
+  char c;
+  while(is.get(c))
+    cout << c;
+
+  is.close();
+
 }
 
 //main
@@ -215,7 +236,7 @@ int main()
   char ans;
   cout << endl << "Hit 1 to rotate. Any other answer will skip this function." << endl;
   cin >> ans;
-  if (ans = '1')  {
+  if (ans == '1')  {
     rotate4(a, b, c);
   }
   else  {
@@ -228,6 +249,7 @@ int main()
 
   findchar5();
   cout << endl;
+  cin.get();
   cin.get();
 
 //exercise 6
@@ -250,13 +272,27 @@ int main()
   cin.get();
 
 //exercise 7
-  int arr1[4];
-  int arr2[4];
+
+  int arr1[4], arr2[4];
   cout << endl << "this checks if two integer arrays are the same. pls enter for each array 4 digits or numbers." << endl;
-  cout << "Enter the first array (4 numbers!) : ";
-  cin >> arr1[0] >> arr1[1] >> arr1[2] >> arr1[3];
+  cout << "Enter the first array (4 numbers!) : " << endl;
+  cout << "first number : ";
+  cin >> arr1[0];
+  cout << "second number : ";
+  cin >> arr1[1];
+  cout << "third number : ";
+  cin >> arr1[2];
+  cout << "fourth number : ";
+  cin >> arr1 [3];
   cout << endl << "Enter the second array (4 numbers!) : ";
-  cin >> arr2[0] >> arr2[1] >> arr2[2] >> arr2[3];
+  cout << "first number : ";
+  cin >> arr2[0];
+  cout << "second number : ";
+  cin >> arr2[1];
+  cout << "third number : ";
+  cin >> arr2[2];
+  cout << "fourth number : ";
+  cin >> arr2[3];
   cout << endl;
   int areEqual = arrEquals7(arr1, arr2);
   if (areEqual == 1)  {
@@ -270,6 +306,14 @@ int main()
   }
   cout << endl;
   cin.get();
+  cin.get();
+
+//exercise 8
+
+  wrfile8();
+  cout << endl;
+  cin.get();
+  cout << endl;
 
   return 0;
 }
