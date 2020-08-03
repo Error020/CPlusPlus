@@ -5,11 +5,15 @@
 #include "selectionsort.hpp"
 using namespace std;
 
+//ignore this :D
+
 void callSelectionsort()  {
   int arrToSort[] = {12, 13, 11, 5};
   cout << endl << "I just made my selectionsort algorithm an actual header file." << endl;
   cout << sort(arrToSort) << endl;
 }
+
+//exercise 1
 
 void flp1()  {
   int i;
@@ -20,6 +24,8 @@ void flp1()  {
     cout << s << endl;
   }
 }
+
+//exercise 2
 
 void cal2() {
   cout << endl << "This will take 3 numbers, summing them up, converting them to floatingpoint before dividing them by 3." << endl;
@@ -36,6 +42,8 @@ void cal2() {
   double re = oux2 / 3.0;
   cout << endl << "Result : " << re;
 }
+
+//exercise 3
 
 void maxmin3(float ar[]) {
   cout << endl << "This should evaluate an array of floatingpoint-numbers and assign the max and min." << endl;
@@ -58,6 +66,8 @@ void maxmin3(float ar[]) {
   cout << endl << "max & min: " << endl << max << endl << min << endl;
 }
 
+//exercise 4
+
 void rotate4(int a, int b, int c )  {
   cout << endl << "type R to rotate those numbers : " << endl << a << endl << b << endl << c << endl;
   int buffer;
@@ -76,6 +86,8 @@ void rotate4(int a, int b, int c )  {
     return;
   }
 }
+
+//exercise 5
 
 void findchar5()  {
   cout << endl << "first write a word and hit ENTER then type which character you want to find in that word : " << endl;
@@ -98,6 +110,32 @@ void findchar5()  {
   }
   cout << endl << "Yout character \'" << c << "\' is on the " << pos << " nd/th position!" << endl;
 }
+
+//exercise 6
+
+int cfd6(string s) {
+  int returnvalue;
+  int i;
+  int j;
+  string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
+  bool ischar = false;
+  for (i = 0; i < s.length(); i++)  {
+    for (j = 0; j < alphabet.length(); j++) {
+      if (s[i] == alphabet[j])  {
+        ischar = true;
+      }
+    }
+  }
+  if (ischar == true) {
+    returnvalue = 0;
+  }
+  else {
+    returnvalue = 1;
+  }
+  return returnvalue;
+}
+
+//main
 
 int main()
 {
@@ -169,6 +207,25 @@ int main()
 
   findchar5();
   cout << endl;
+  cin.get();
+
+  //exercise 6
+
+  cout << endl;
+  cout << endl << "so this basically checks if a string you enter does only contain digits." << endl;
+  string s;
+  cout << endl << "please enter a word for example \'hello\' or an array of digits for example \'1337\' : ";
+  cin >> s;
+  int re = cfd6(s);
+  if (re == 1)  {
+    cout << endl << "your string contains only integers so your return-value is 1" << endl;
+  }
+  else if (re == 0) {
+    cout << endl << "your string contains letters so yout return-value is 0" << endl;
+  }
+  else {
+    cout << endl << "something went wrong!" << endl;
+  }
   cin.get();
 
   return 0;
