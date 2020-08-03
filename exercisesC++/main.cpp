@@ -165,7 +165,7 @@ void wrfile8() {
 
   os << x;
 
-  os.close ();
+  os.close();
 
   is.open ("myfile.txt", ifstream::in);
 
@@ -175,6 +175,27 @@ void wrfile8() {
 
   is.close();
 
+}
+
+//exercise 9
+
+void counter9() {
+  ifstream is;
+
+  is.open ("counter.txt", ifstream::in);
+  char numc;
+  is.get(numc);
+
+  is.close();
+
+  int numic = (int)numc+1;
+  char numcc = (char)numic;
+
+  ofstream os;
+  os.open ("counter.txt", ofstream::out | ofstream::trunc);
+  os << numcc;
+  cout << numcc;
+  os.close();
 }
 
 //main
@@ -314,6 +335,12 @@ int main()
   cout << endl;
   cin.get();
   cout << endl;
+
+//exercise 9
+
+  counter9();
+  cout << endl;
+  cin.get();
 
   return 0;
 }
