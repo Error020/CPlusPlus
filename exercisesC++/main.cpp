@@ -135,6 +135,27 @@ int cfd6(string s) {
   return returnvalue;
 }
 
+//exercise 7
+
+int arrEquals7(int* a, int* b) {
+  int i;
+  bool bo;
+  for (i = 0; i < 5-1; i++) {
+    if (a[i] == b[i]) {
+      bo = true;
+    }
+    else {
+      bo = false;
+    }
+  }
+  if (bo == true)  {
+    return 1;
+  }
+  else {
+    return 0;
+  }
+}
+
 //main
 
 int main()
@@ -203,13 +224,13 @@ int main()
   cout << endl;
   cin.get();
 
-  //exercise 5
+//exercise 5
 
   findchar5();
   cout << endl;
   cin.get();
 
-  //exercise 6
+//exercise 6
 
   cout << endl;
   cout << endl << "so this basically checks if a string you enter does only contain digits." << endl;
@@ -221,11 +242,33 @@ int main()
     cout << endl << "your string contains only integers so your return-value is 1" << endl;
   }
   else if (re == 0) {
-    cout << endl << "your string contains letters so yout return-value is 0" << endl;
+    cout << endl << "your string contains letters so your return-value is 0" << endl;
   }
   else {
     cout << endl << "something went wrong!" << endl;
   }
+  cin.get();
+
+//exercise 7
+  int arr1[4];
+  int arr2[4];
+  cout << endl << "this checks if two integer arrays are the same. pls enter for each array 4 digits or numbers." << endl;
+  cout << "Enter the first array (4 numbers!) : ";
+  cin >> arr1[0] >> arr1[1] >> arr1[2] >> arr1[3];
+  cout << endl << "Enter the second array (4 numbers!) : ";
+  cin >> arr2[0] >> arr2[1] >> arr2[2] >> arr2[3];
+  cout << endl;
+  int areEqual = arrEquals7(arr1, arr2);
+  if (areEqual == 1)  {
+    cout << endl << "your arrays are equal, your return number is 1" << endl;
+  }
+  else if (areEqual == 0) {
+    cout << endl << "your arrays aren't equal, your return number is 0" << endl;
+  }
+  else {
+    cout << endl << "something went wrong!" << endl;
+  }
+  cout << endl;
   cin.get();
 
   return 0;
