@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <fstream>
+#include <array>
 #include "selectionsort.hpp"
 using namespace std;
+
+const string alphabet = "ABCDEFGHJKLMNOPQRSTUVWÄÖÜabcdefghijklmnopqrstuvwxyzäöüß";
 
 //ignore this :D
 
@@ -115,7 +119,6 @@ int cfd6(string s) {
   int returnvalue;
   int i;
   int j;
-  string alphabet = "abcdefghijklmnopqrstuvwxyzäöüß";
   bool ischar = false;
   for (i = 0; i < s.length(); i++)  {
     for (j = 0; j < alphabet.length(); j++) {
@@ -196,6 +199,44 @@ void counter9() {
   os << numcc;
   cout << numcc;
   os.close();
+}
+
+//exercise 10 not done yet
+
+void data() {
+  ifstream is;
+  is.open ("mydata.dat", ifstream::in);
+  char c;
+  string s;
+  int i;
+  int j;
+  string word;
+  stringstream numbers;
+  numbers << s;
+  string temps;
+  int tempi = 0;
+  int equals1 = 0;
+  while(is.get(c))
+    s += c;
+  for (i=0;i<s.length(); i++) {
+    for (j=0;j<alphabet.length(); j++)  {
+      if (s[i] == alphabet[j])  {
+        word += alphabet[j];
+      }
+    }
+  }
+
+  while(!numbers.eof())  {
+    numbers >> temps;
+
+    if (stringstream(temps) >> tempi) {
+      equals1 += tempi;
+    }
+  }
+
+  cout << word << endl << equals1;
+
+  is.close();
 }
 
 //main
@@ -341,6 +382,11 @@ int main()
   counter9();
   cout << endl;
   cin.get();
+
+//exercise 10 not done yet
+
+  data();
+  cout << endl;
 
   return 0;
 }
