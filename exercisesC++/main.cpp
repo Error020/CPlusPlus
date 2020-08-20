@@ -9,6 +9,8 @@ using namespace std;
 
 const string alphabet = "ABCDEFGHJKLMNOPQRSTUVWÄÖÜabcdefghijklmnopqrstuvwxyzäöüß";
 
+//I won't comment much until the repository is finished here.
+
 //ignore this :D
 
 void callSelectionsort()  {
