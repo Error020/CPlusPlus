@@ -217,6 +217,7 @@ void data() {
   int tempi = 0;
   int equals1 = 0;
   while(is.get(c))
+    cout << c; 
     s += c;
   for (i=0;i<s.length(); i++) {
     for (j=0;j<alphabet.length(); j++)  {
