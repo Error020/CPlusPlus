@@ -2,8 +2,8 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <fstream>
-#include <array>
+#include <fstream>´´
+
 #include "selectionsort.hpp"
 using namespace std;
 
@@ -217,7 +217,7 @@ void data() {
   int tempi = 0;
   int equals1 = 0;
   while(is.get(c))
-    cout << c; 
+    cout << c;
     s += c;
   for (i=0;i<s.length(); i++) {
     for (j=0;j<alphabet.length(); j++)  {
@@ -227,17 +227,6 @@ void data() {
     }
   }
 
-  while(!numbers.eof())  {
-    numbers >> temps;
-
-    if (stringstream(temps) >> tempi) {
-      equals1 += tempi;
-    }
-  }
-
-  cout << word << endl << equals1;
-
-  is.close();
 }
 
 //main
