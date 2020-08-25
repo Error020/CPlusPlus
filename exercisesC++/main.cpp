@@ -203,7 +203,7 @@ void counter9() {
   os.close();
 }
 
-//exercise 10 not done yet
+//10 not done yet
 
 void data() {
   ifstream is;
@@ -228,6 +228,7 @@ void data() {
       }
     }
   }
+
 
 }
 
