@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\corwi\source\repos\winapi\winapi\main.cpp(32,9): error C2664: "HWND CreateWindowExW(DWORD,LPCWSTR,LPCWSTR,DWORD,int,int,int,int,HWND,HMENU,HINSTANCE,LPVOID)" : Konvertierung von Argument 2 von "const char [9]" in "LPCWSTR" nicht möglich
+C:\Users\corwi\source\repos\winapi\winapi\main.cpp(32,9): message : Die Typen, auf die verwiesen wird, sind nicht verknüpft; die Konvertierung erfordert einen reinterpret_cast-Operator oder eine Typumwandlung im C- oder Funktionsformat.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winuser.h(4436,1): message : Siehe Deklaration von "CreateWindowExW"
