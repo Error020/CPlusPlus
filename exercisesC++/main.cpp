@@ -11,8 +11,6 @@ const string alphabet = "ABCDEFGHJKLMNOPQRSTUVWÄÖÜabcdefghijklmnopqrstuvwxyz�
 
 //I won't comment much until the repository is finished here.
 
-//ignore this :D
-
 void callSelectionsort()  {
   int arrToSort[] = {12, 13, 11, 5};
   cout << endl << "I just made my selectionsort algorithm an actual header file." << endl;
